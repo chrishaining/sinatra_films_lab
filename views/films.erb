@@ -2,9 +2,9 @@
 <div class="films">
 <ul>
   <% @films.each do |f| %>
-  <li>
-    <%= f.title %> </li>
-    <% end %>
-
+<li>
+  <a href="/films/<%= f.id %>"><%= f.title %></a>
+</li>
+<% end %>
 </ul>
 </div>

@@ -38,6 +38,13 @@ class Film
     return customers
   end
 
+  def self.find_by_id(id)
+      sql = "SELECT * FROM films WHERE id = $1"
+      values = [id]
+      film_data = SqlRunner.run(sql, values)
+      return Film.new(film_data[0])
+    end
+
   def number_of_viewers()
     return customers.count
   end
