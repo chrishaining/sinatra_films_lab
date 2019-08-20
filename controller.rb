@@ -13,3 +13,8 @@ get '/films' do
   # @films = films.each{|film|Film.new(film)}
   erb(:films)
 end
+
+get '/:film' do
+  @films = Film.new()
+  erb(:film)
+end
