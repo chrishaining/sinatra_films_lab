@@ -1,2 +1,10 @@
 <h1>These are our films</h1>
-<h1><%= @films %></h1>
+<div class="films">
+<ul>
+  <% @films.each do |f| %>
+  <li>
+    <%= f.title %> </li>
+    <% end %>
+
+</ul>
+</div>

@@ -10,6 +10,6 @@ end
 
 get '/films' do
   @films = Film.all()
-  # @films = films.map{|film|Film.new[options]}
+  # @films = films.each{|film|Film.new(film)}
   erb(:films)
 end
